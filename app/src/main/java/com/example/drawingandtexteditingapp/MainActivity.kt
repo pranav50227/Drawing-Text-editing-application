@@ -11,6 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.drawingandtexteditingapp.ui.theme.DrawingAndTextEditingAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +24,31 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DrawingAndTextEditingAppTheme {
-                DrawingScreen()
+                val navController = rememberNavController()
+                val context = LocalContext.current
+                val application = context.applicationContext as DrawingApplication
+                val viewModel: DrawingViewModel = viewModel(
+                    factory = DrawingViewModelFactory(application.repository)
+                )
+
+                NavHost(navController = navController, startDestination = "drawings_list") {
+                    composable("drawings_list") {
+                        DrawingListScreen(
+                            viewModel = viewModel,
+                            onNavigateToDrawing = {
+                                navController.navigate("drawing_canvas")
+                            }
+                        )
+                    }
+                    composable("drawing_canvas") {
+                        DrawingScreen(
+                            viewModel = viewModel,
+                            onNavigateBack = {
+                                navController.popBackStack()
+                            }
+                        )
+                    }
+                }
             }
         }
     }
