@@ -1,4 +1,4 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -19,6 +19,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.drawingandtexteditingapp.ui.components.ColorPickerDialog
+import com.example.drawingandtexteditingapp.ui.components.DrawingCanvas
+import com.example.drawingandtexteditingapp.ui.viewmodel.DrawingAction
+import com.example.drawingandtexteditingapp.ui.viewmodel.DrawingViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

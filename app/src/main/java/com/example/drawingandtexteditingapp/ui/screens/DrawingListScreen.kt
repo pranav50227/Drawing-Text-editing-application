@@ -1,4 +1,4 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.ui.screens
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
@@ -23,6 +23,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.drawingandtexteditingapp.R
+import com.example.drawingandtexteditingapp.data.model.Line
+import com.example.drawingandtexteditingapp.ui.viewmodel.DrawingAction
+import com.example.drawingandtexteditingapp.ui.viewmodel.DrawingViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

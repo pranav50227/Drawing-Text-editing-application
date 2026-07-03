@@ -1,7 +1,8 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.drawingandtexteditingapp.data.repository.DrawingRepository
 
 class DrawingViewModelFactory(private val repository: DrawingRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

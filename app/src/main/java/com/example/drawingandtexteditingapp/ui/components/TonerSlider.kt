@@ -1,4 +1,4 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

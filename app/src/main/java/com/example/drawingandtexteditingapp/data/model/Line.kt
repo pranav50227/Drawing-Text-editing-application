@@ -1,4 +1,4 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.data.model
 
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color

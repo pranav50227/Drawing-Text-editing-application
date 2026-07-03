@@ -1,4 +1,4 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.ui.components
 
 import android.graphics.Color.colorToHSV
 import androidx.compose.foundation.background

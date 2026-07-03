@@ -1,10 +1,11 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.drawingandtexteditingapp.data.local.entity.DrawingEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

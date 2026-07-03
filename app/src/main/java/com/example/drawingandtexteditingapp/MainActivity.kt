@@ -17,6 +17,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.drawingandtexteditingapp.ui.theme.DrawingAndTextEditingAppTheme
+import com.example.drawingandtexteditingapp.ui.viewmodel.DrawingViewModel
+import com.example.drawingandtexteditingapp.ui.viewmodel.DrawingViewModelFactory
+import com.example.drawingandtexteditingapp.ui.screens.DrawingListScreen
+import com.example.drawingandtexteditingapp.ui.screens.DrawingScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,21 +55,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    DrawingAndTextEditingAppTheme {
-        Greeting("Android")
     }
 }

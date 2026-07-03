@@ -1,4 +1,4 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.ui.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -12,6 +12,8 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.geometry.Offset
+import com.example.drawingandtexteditingapp.data.model.Line
+import com.example.drawingandtexteditingapp.ui.viewmodel.DrawingAction
 
 @Composable
 fun DrawingCanvas(

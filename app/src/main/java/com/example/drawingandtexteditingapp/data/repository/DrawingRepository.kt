@@ -1,5 +1,7 @@
-package com.example.drawingandtexteditingapp
+package com.example.drawingandtexteditingapp.data.repository
 
+import com.example.drawingandtexteditingapp.data.local.dao.DrawingDao
+import com.example.drawingandtexteditingapp.data.local.entity.DrawingEntity
 import kotlinx.coroutines.flow.Flow
 
 class DrawingRepository(private val drawingDao: DrawingDao) {
